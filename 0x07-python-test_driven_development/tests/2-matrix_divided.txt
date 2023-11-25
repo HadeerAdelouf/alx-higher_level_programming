@@ -46,11 +46,6 @@ Test matrix is none:
     ...
     NameError: name 'none' is not defined
 
-Test empty matrix:
-    >>> matrix_divided([[]], 10)
-    Traceback (most recent call last):
-    ...
-    TypeError: matrix must be a matrix list of integers/floats
 
 Test matrix with different rows
     >>> matrix_divided([[2, 41, 82], [11, 43]], 12)

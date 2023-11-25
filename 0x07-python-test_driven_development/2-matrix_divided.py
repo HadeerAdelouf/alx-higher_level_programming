@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
         A new matrix which is result of the division.
     """
 
-    if (not isinstance(matrix, list) or matrix == [] or
+    if (not isinstance(matrix, list) or
             not all(isinstance(row, list) for row in matrix) or
             not all((isinstance(ele, int) or isinstance(ele, float))
                     for ele in [num for row in matrix for num in row])):
@@ -32,7 +32,7 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
+    return ([list(map(lambda i: round(i / div, 2), row)) for row in matrix])
 
 
 if __name__ == "__main__":
