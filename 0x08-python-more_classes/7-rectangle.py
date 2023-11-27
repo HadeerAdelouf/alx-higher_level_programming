@@ -21,7 +21,7 @@ class Rectangle:
         self.width = width
         self.height = height
         type(self).number_of_instances += 1
-    
+
     @property
     def width(self):
         """Get the width of the Rectangle."""
@@ -66,7 +66,8 @@ class Rectangle:
 
         RectangLe = []
         for i in range(self.__height):
-            [RectangLe.append(str(self.print_symbol)) for j in range(self.__width)]
+            [RectangLe.append(str(self.print_symbol)) 
+             for j in range(self.__width)]
             if i != self.__height - 1:
                 RectangLe.append("\n")
         return ("".join(RectangLe))
