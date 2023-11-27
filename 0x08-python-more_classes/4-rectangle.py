@@ -63,7 +63,7 @@ class Rectangle:
             if i != self.__height - 1:
                 RectangLe.append("\n")
         return ("".join(RectangLe))
-    
+
     def __repr__(self):
         """return str representaion of rectangle 
         for developers"""
