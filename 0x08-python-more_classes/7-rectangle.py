@@ -6,9 +6,11 @@
 class Rectangle:
     """Represent an empty Rectangle class.
         Attrs:
-        number_of_instances: The number of Rectangle instances"""
+        number_of_instances: The number of Rectangle instances
+        print_symbol:symbol used for string representation"""
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -64,7 +66,7 @@ class Rectangle:
 
         RectangLe = []
         for i in range(self.__height):
-            [RectangLe.append('#') for j in range(self.__width)]
+            [RectangLe.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 RectangLe.append("\n")
         return ("".join(RectangLe))
