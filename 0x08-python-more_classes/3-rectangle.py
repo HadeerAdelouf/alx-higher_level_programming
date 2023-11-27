@@ -45,18 +45,18 @@ class Rectangle:
         """get perimeter of rect"""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return (2 * (self.height+ self.__width))
-    
+        return (2 * (self.height + self.__width))
+
     def area(self):
         """get area of rect"""
         return (self.__height * self.__width)
-    
+
     def __str__(self):
         """returns readable presentaion of
         width and height by # sign"""
         if self.__width == 0 or self.__height == 0:
             return ("")
-        
+
         RectangLe = []
         for i in range(self.__height):
             [RectangLe.append('#') for j in range(self.__width)]
