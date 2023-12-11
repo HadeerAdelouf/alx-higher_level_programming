@@ -23,7 +23,7 @@ class Base:
         if list_dictionaries is None or list_dictionaries == "[]":
             return "[]"
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         """ Save object in a file """
@@ -41,14 +41,13 @@ class Base:
         with open(file_Name, 'w') as f:
             f.write(lists)
 
-
     @staticmethod
     def from_json_string(json_string):
         """ JSON string to dictionary """
         if not json_string:
             return []
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """ Create an instance """
@@ -58,7 +57,7 @@ class Base:
             new = cls(10)
         new.update(**dictionary)
         return new
-    
+
     @classmethod
     def load_from_file(cls):
         """ Returns a list of instances """
@@ -94,7 +93,6 @@ class Base:
                   encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(list_objs)
-
 
     @classmethod
     def load_from_file_csv(cls):

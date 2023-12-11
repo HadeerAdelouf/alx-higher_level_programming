@@ -20,7 +20,7 @@ class Rectangle(Base):
     def width(self):
         '''width of rect'''
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """ width setter """
@@ -34,7 +34,7 @@ class Rectangle(Base):
     def height(self):
         """ height of rect """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """ height setter """
@@ -48,7 +48,7 @@ class Rectangle(Base):
     def x(self):
         '''x of rect'''
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         if type(value) is not int:
@@ -61,7 +61,7 @@ class Rectangle(Base):
     def y(self):
         '''y of rect'''
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         if type(value) is not int:
@@ -73,7 +73,7 @@ class Rectangle(Base):
     def area(self):
         """ returns the area of the rectangle object """
         return self.width * self.height
-    
+
     def display(self):
         """ displays a rectangle """
         rect = self.y * "\n"
@@ -86,8 +86,8 @@ class Rectangle(Base):
     def __str__(self):
         """Return the str representation of the Rect"""
         return "[Rectangle] ({}) {}/{} - {}/{}".\
-            format(self.id,self.x, self.y,self.width, self.height)
-    
+            format(self.id, self.x, self.y, self.width, self.height)
+
     def __update(self, id=None, width=None, height=None, x=None, y=None):
         '''method that updates instance attributes via *args.'''
         if id is not None:
