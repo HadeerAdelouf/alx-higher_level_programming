@@ -5,6 +5,7 @@ table of hbtn_0e_0_usa where name matches the argument
 """
 
 import MySQLdb
+import sys
 from sys import argv
 
 if __name__ == '__main__':
