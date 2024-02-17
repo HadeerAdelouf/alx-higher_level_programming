@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Script that prints the State object with the name passed as argument
-from the database
+Script that adds the State object “Louisiana” to the database
 """
 
 from model_state import Base, State
@@ -17,10 +16,10 @@ if __name__ == "__main__":
     session = Session(bind=engine)
 
     Base.metadata.create_all(engine)
-    sTate = session.query(State).filter(State.name == argv[4]).first()
 
-    if sTate:
-        print("{}".format(sTate.id))
-    else:
-        print("Not found")
+    add_state = State(name="Louisiana")
+    session.add(add_state)
+    session.commit()
+
+    print(add_state.id)
     session.close()

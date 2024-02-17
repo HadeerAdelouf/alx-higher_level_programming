@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Script that prints the State object with the name passed as argument
-from the database
+Script that changes the name of a State object to the database
+Using module SQLAlchemy
 """
 
 from model_state import Base, State
@@ -12,15 +12,11 @@ from sys import argv
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
-
-    Session = sessionmaker()
-    session = Session(bind=engine)
-
+    Session = sessionmaker(bind=engine)
+    session = Session()
     Base.metadata.create_all(engine)
-    sTate = session.query(State).filter(State.name == argv[4]).first()
 
-    if sTate:
-        print("{}".format(sTate.id))
-    else:
-        print("Not found")
+    state_update = session.query(State).filter_by(id='2').first()
+    state_update.name = "New Mexico"
+    session.commit()
     session.close()
