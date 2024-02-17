@@ -14,5 +14,7 @@ if __name__ == "__main__":
                 JOIN states
                 ON cities.state_id = states.id
                 ORDER BY cities.id ASC""")
+
+    rows = db_cursor.fetchall()
     for x in rows:
         print(x)
