@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Python file that contains the class 
+Python file that contains the class
 definition of a State and an instance
 """
 from sqlalchemy import Column, Integer, String
