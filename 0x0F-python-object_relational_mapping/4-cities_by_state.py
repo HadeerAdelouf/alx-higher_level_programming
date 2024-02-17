@@ -2,7 +2,7 @@
 """
 Script that lists all cities from the database hbtn_0e_4_usa
 """
-import MySQLdb
+import MySQLdb as db
 from sys import argv
 
 if __name__ == '__main__':
