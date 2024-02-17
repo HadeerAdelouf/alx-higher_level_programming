@@ -10,9 +10,9 @@ if __name__ == '__main__':
                          passwd=argv[2], db=argv[3])
 
     db_cur = db.cursor()
-    db_cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
-                   INNER JOIN states ON cities.states_id = states.id\
-                    ORDER BY cities.id ASC")
+    db_cur.execute("SELECT cities.id, cities.name, states.name \
+                                FROM cities JOIN states ON cities.state_id \
+                                = states.id ORDER BY cities.id ASC")
 
     rows = db_cur.fetchall()
     for x in rows:
