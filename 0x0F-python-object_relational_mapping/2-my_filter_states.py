@@ -17,6 +17,3 @@ if __name__ == '__main__':
     rows = db_cursor.fetchall()
     for i in rows:
         print(i)
-
-    db_cursor.close()
-    db_connect.close()
