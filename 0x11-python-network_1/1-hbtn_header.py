@@ -6,7 +6,7 @@ import sys
 import urllib.request
 
 if __name__ == "__main__":
-    uRl = sys.avg[1]
+    uRl = sys.argv[1]
 
     request = urllib.request.Request(uRl)
     with urllib.request.urlopen(request) as response:
